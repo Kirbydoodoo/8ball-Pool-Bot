@@ -8,7 +8,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!bot'):
+    if message.content.startswith('8ball bot'):
         msg = 'Have You Called Me :thinking:  {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
        
