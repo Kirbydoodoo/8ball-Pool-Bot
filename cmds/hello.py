@@ -19,4 +19,4 @@ async def on_ready():
     print(client.user.id)
     print('8ball Pool Ready to Go!')
 
-client.run('NTk4NTE3NTg0Njg1NDMyODQz.XSX3gA.ZggoFividoGv-OZciSh-TSav4p8')
+client.run('TOKEN')
