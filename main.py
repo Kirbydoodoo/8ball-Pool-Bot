@@ -7,7 +7,11 @@ import asyncio
 import aiohttp
 import json
 
+TOKEN = 'NTk4NTE3NTg0Njg1NDMyODQz.XSiVPQ.qWobrQJo9XAxUP6Uzz82Spb9Tjk' 
+
 client = discord.Client()
+
+
 
 @client.event
 async def on_ready():
