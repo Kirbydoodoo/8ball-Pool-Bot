@@ -7,8 +7,6 @@ import asyncio
 import aiohttp
 import json
 
-TOKEN = 'NTk4NTE3NTg0Njg1NDMyODQz.XSiVPQ.qWobrQJo9XAxUP6Uzz82Spb9Tjk' 
-
 client = Bot(command_prefix="8ball")
 
 client = discord.Client()
@@ -75,4 +73,4 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate']
        
-client.run(TOKEN) 
+client.run('TOKEN') 
