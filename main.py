@@ -9,6 +9,13 @@ import json
 
 client = discord.Client()
 
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('8ball Pool Ready to Go!')
+
 # hello
 
 @client.event
@@ -64,12 +71,4 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate']
        
-   
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('8ball Pool Ready to Go!')
-
 client.run('TOKEN')
