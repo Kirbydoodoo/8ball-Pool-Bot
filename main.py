@@ -9,9 +9,9 @@ import json
 
 TOKEN = 'NTk4NTE3NTg0Njg1NDMyODQz.XSiVPQ.qWobrQJo9XAxUP6Uzz82Spb9Tjk' 
 
+client = Bot(command_prefix="8ball")
+
 client = discord.Client()
-
-
 
 @client.event
 async def on_ready():
