@@ -4,14 +4,12 @@ client = discord.Client()
 
 @client.event
 async def on_message(message):
-    # we do not want the bot to reply to itself
     if message.author == client.user:
         return
 
     if message.content.startswith('8ball bot'):
-        msg = 'Have You Called Me :thinking:  {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-       
+        await message.channel.send('You Called Me :thinking: {0.author.mention}'.format(message))
+   
 @client.event
 async def on_ready():
     print('Logged in as')
