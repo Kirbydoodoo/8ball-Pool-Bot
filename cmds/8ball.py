@@ -5,8 +5,7 @@ import json
 from discord import Game
 from discord.ext.commands import Bot
 
-BOT_PREFIX = ("!")
-TOKEN = "NTk4NTE3NTg0Njg1NDMyODQz.XSX3gA.ZggoFividoGv-OZciSh-TSav4p8"
+BOT_PREFIX = ("8ball")
 
 client = Bot(command_prefix="!")
 
