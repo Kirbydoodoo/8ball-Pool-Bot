@@ -9,9 +9,8 @@ async def on_message(message):
         return
 
     if message.content.startswith('8ball hello'):
-        msg = 'Hello {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-       
+        await message.channel.send('Hello :wink: {0.author.mention}'.format(message))
+         
 @client.event
 async def on_ready():
     print('Logged in as.')
