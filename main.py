@@ -71,4 +71,5 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate']
        
-client.run('TOKEN')
+bot = 8poolbot()
+bot.run()
