@@ -7,11 +7,9 @@ import asyncio
 import aiohttp
 import json
 
-client = Bot(command_prefix="8ball")
+bot = commands.Bot(command_prefix="8ball")
 
-client = discord.Client()
-
-@client.event
+@bot.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
@@ -20,7 +18,7 @@ async def on_ready():
 
 # hello
 
-@client.event
+@bot.event
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
@@ -33,7 +31,7 @@ async def on_message(message):
 # bot 
 
 
-@client.event
+@bot.event
 async def on_message(message):
     if message.author == client.user:
         return
@@ -43,7 +41,7 @@ async def on_message(message):
       
 # 8ball
 
-@client.command(name='8ball',
+@bot.command(name='8ball',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
                 aliases=['eight_ball', 'eightball', '8-ball'],
@@ -59,12 +57,12 @@ async def eight_ball(context):
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
 
 
-@client.command()
+@bot.command()
 async def square(number):
     squared_value = int(number) * int(number)
     await client.say(str(number) + " squared is " + str(squared_value))
    
-@client.command()
+@bot.command()
 async def bitcoin():
     url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
     async with aiohttp.ClientSession() as session:  # Async HTTP request
@@ -73,4 +71,4 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate']
        
-client.run(os.getenv('Token'))
+bot.run('TOKEN')
