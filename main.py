@@ -71,4 +71,4 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate']
        
-bot.run('TOKEN')
+bot.run('NjAxOTI2NjYyMzc2MTI4NTEy.XTJZ6w.xSeEdC-8MrMFE9uq5DG_3cHfWx8')
